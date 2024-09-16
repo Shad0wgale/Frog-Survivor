@@ -13,7 +13,7 @@ class Game:
         self.screen = pygame.display.set_mode((self.settings.screen_width, self.settings.screen_height))
         self.clock = pygame.time.Clock()
         self.player = Player(name="Miles")
-        self.game_map = GameMap(self.settings.map_width, self.settings.map_height, "grass.png")
+        self.game_map = GameMap("untitled.tmx")
         self.camera = Camera(self.settings.screen_width, self.settings.screen_height)
         
     def run(self):
