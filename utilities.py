@@ -49,8 +49,11 @@ class StateMachine:
         self.current_state = "idle"  # Initial state
 
     def transition(self, new_state):
-        # Check if the new state is valid
-        if new_state in self.states:
+        # Check if the new state is valid and not the same as the current state
+        if new_state == self.current_state:
+            #print(f"Already in state {new_state}, no transition needed.")
+            pass
+        elif new_state in self.states:
             print(f"Transitioning from {self.current_state} to {new_state}")
             self.current_state = new_state
         else:
